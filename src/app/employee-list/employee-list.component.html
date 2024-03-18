@@ -1,0 +1,23 @@
+<!-- employee-list.component.html -->
+<div>
+  <h2>Employee List</h2>
+  <div *ngIf="employees.length === 0">
+    <p>No employees found.</p>
+  </div>
+  <div *ngFor="let employee of employees">
+    <div class="employee-item">
+      <img [src]="employee.Picture" alt="Employee Image">
+      <div class="employee-details">
+        <h3>{{ employee.FirstName }} {{ employee.LastName }}</h3>
+        <p>Employee ID: {{ employee.EmployeeId }}</p>
+        <p>Birthday: {{ employee.Birthday }}</p>
+        <p>Gender: {{ employee.Gender }}</p>
+      </div>
+      <div class="actions">
+        <button (click)="editEmployee(employee.EmployeeId)">Edit</button>
+        <button (click)="deleteEmployee(employee.EmployeeId)">Delete</button>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

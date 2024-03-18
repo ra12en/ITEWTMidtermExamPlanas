@@ -1,0 +1,31 @@
+<!-- edit-employee.component.html -->
+<form (submit)="updateEmployee()">
+  <div class="form-group">
+    <label for="employeeNumber">Employee Number:</label>
+    <input type="text" id="employeeNumber" name="employeeNumber" [(ngModel)]="employee.EmployeeNumber" required>
+  </div>
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="employee.FirstName" required>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="employee.LastName" required>
+  </div>
+  <div class="form-group">
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday" [(ngModel)]="employee.Birthday" required>
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" [(ngModel)]="employee.Gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="picture">Picture URL:</label>
+    <input type="text" id="picture" name="picture" [(ngModel)]="employee.Picture" required>
+  </div>
+  <button type="submit">Update Employee</button>
+</form>

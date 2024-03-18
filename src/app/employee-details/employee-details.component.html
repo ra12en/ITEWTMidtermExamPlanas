@@ -1,0 +1,15 @@
+<!-- employee-details.component.html -->
+<h2>Employee Details</h2>
+
+<div *ngIf="employee">
+  <div>
+    <img [src]="employee.Picture" alt="Employee Picture" width="100" height="100">
+    <span>{{ employee.FirstName }} {{ employee.LastName }}</span>
+  </div>
+  <div>
+    <span>Employee ID: {{ employee.EmployeeId }}</span>
+    <span>Employee Number: {{ employee.EmployeeNumber }}</span>
+    <span>Birthday: {{ employee.Birthday }}</span>
+    <span>Gender: {{ employee.Gender }}</span>
+  </div>
+</div>
